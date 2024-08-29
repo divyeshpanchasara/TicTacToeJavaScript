@@ -19,13 +19,6 @@ function move(id){
         element.textContent = player2;
     }
 
-    let draw = checkForDraw(boardElements);
-    if(draw === 9){
-        alert("It's a DRAW!! Better Luck Next Time")
-        restart();
-        return;
-    }
-
     let win = checkWin(boardElements);
     if(win === 1){
         alert("Player 1 WINS!!");
@@ -37,7 +30,15 @@ function move(id){
         restart();
         return;
     }
-    else flag = !flag;
+
+    let draw = checkForDraw(boardElements);
+    if(draw === 9){
+        alert("It's a DRAW!! Better Luck Next Time")
+        restart();
+        return;
+    }
+
+    flag = !flag;
 }
 
 function checkWin(boardElements){

@@ -22,28 +22,25 @@ body{
 }
 
 .button-class{
-    outline : none;
-    align-items: center;
-    justify-content: center;
+    height: 70px;
+    width: 70px;
     background-color: black;
     color: white;
     
     border: 1px solid white;
     border-radius: 5px;
 
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New';
     font-size: xx-large;
+    font-weight: bold;
 
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 2px;
     margin-left: 2px;
-
-    height: 70px;
-    width: 70px;
     
     box-sizing: border-box;
-
+    cursor: pointer;
     transition: all 0.15s;
 }
 
@@ -81,7 +78,7 @@ body{
     margin-left: 2px;
 
     box-sizing: border-box;
-
+    cursor: pointer;
     transition: all 0.15s;
 }
 

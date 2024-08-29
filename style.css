@@ -1,7 +1,6 @@
 .header{
     background-color: black;
     color: white;
-
     font-family: 'Courier New';
     font-size: 50px;
 
@@ -21,6 +20,7 @@ body{
     margin-bottom: 0px;
 }
 
+
 .button-class{
     height: 70px;
     width: 70px;
@@ -36,11 +36,9 @@ body{
 
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-right: 2px;
-    margin-left: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
     
-    box-sizing: border-box;
-    cursor: pointer;
     transition: all 0.15s;
 }
 
@@ -76,8 +74,6 @@ body{
     margin-bottom: 0px;
     margin-right: 2px;
     margin-left: 2px;
-
-    box-sizing: border-box;
     cursor: pointer;
     transition: all 0.15s;
 }

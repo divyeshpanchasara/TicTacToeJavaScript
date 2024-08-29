@@ -9,28 +9,42 @@
     <body>
         <center>
             <header>
-                <h1 class="header" id = "myheader">Tic-Tac-Toe</h1>
+                <p class="header" id = "myheader"><b>Tic-Tac-Toe<b></p>
             </header>
         </center>
         <main>
-            <center>
                 <div class = "board">
-                    <button class="button-class" id = "7" onclick="move(this.id)"></button>
-                    <button class="button-class" id = "8" onclick="move(this.id)"></button>
-                    <button class="button-class" id = "9" onclick="move(this.id)"></button>
-                    <br>
-                    <button class="button-class" id = "4" onclick="move(this.id)"></button>
-                    <button class="button-class" id = "5" onclick="move(this.id)"></button>
-                    <button class="button-class" id = "6" onclick="move(this.id)"></button>
-                    <br>
-                    <button class="button-class" id = "1" onclick="move(this.id)"></button>
-                    <button class="button-class" id = "2" onclick="move(this.id)"></button>
-                    <button class="button-class" id = "3" onclick="move(this.id)"></button>        
+                    <div class = "row" style="
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;">
+                        <button class="button-class" id = "7" onclick="move(this.id)"></button>
+                        <button class="button-class" id = "8" onclick="move(this.id)"></button>
+                        <button class="button-class" id = "9" onclick="move(this.id)"></button>
+                    </div>
+                    <div class = "row" style="
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;">
+                        <button class="button-class" id = "4" onclick="move(this.id)"></button>
+                        <button class="button-class" id = "5" onclick="move(this.id)"></button>
+                        <button class="button-class" id = "6" onclick="move(this.id)"></button>
+                    </div>
+                    <div class = "row" style="
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;">
+                        <button class="button-class" id = "1" onclick="move(this.id)"></button>
+                        <button class="button-class" id = "2" onclick="move(this.id)"></button>
+                        <button class="button-class" id = "3" onclick="move(this.id)"></button>
+                    </div>        
                 </div>
-                <div class="restart">
+                <div class="restart" style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;">
                     <button id="restart-button" onclick="restart()"> Restart Game</button>
                 </div>
-            </center>
         </main>
         <script src = "tictactoe.js"></script>
     </body>

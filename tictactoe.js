@@ -7,9 +7,16 @@ let flag = true;
 
 
 function move(id){
+    let nodeElement = document.getElementById("message-para");
+    if(!flag){
+        nodeElement.textContent = "Turn : Player " + player1;
+    }
+    else nodeElement.textContent = "Turn : Player " + player2;
+
+
     let element = document.getElementById(id);
     if(element.textContent === player1 || element.textContent === player2){
-        alert("Ops!! Try another cell");
+        nodeElement.textContent = "Ops!! Try Another Cell";
         return;
     }
     else if(flag){
@@ -21,24 +28,36 @@ function move(id){
 
     let win = checkWin(boardElements);
     if(win === 1){
-        alert("Player 1 WINS!!");
-        restart();
+        nodeElement.textContent = "Player 1 Wins!!";
+        disableButtons(boardElements);
         return;
     }
     else if(win === 2){
-        alert("Player 2 WINS!!");
-        restart();
+        nodeElement.textContent = "Player 2 Wins!!";
+        disableButtons(boardElements);
         return;
     }
 
     let draw = checkForDraw(boardElements);
     if(draw === 9){
-        alert("It's a DRAW!! Better Luck Next Time")
-        restart();
+        nodeElement.textContent = "It's a Draw!";
+        disableButtons(boardElements);
         return;
     }
 
     flag = !flag;
+}
+
+function disableButtons(boardElements){
+    for(element of boardElements){
+        element.disabled = true; 
+    }
+}
+
+function enableButtons(boardElements){
+    for(element of boardElements){
+        element.disabled = false; 
+    }
 }
 
 function checkWin(boardElements){
@@ -108,6 +127,9 @@ function checkForDraw(boardElements){
 
 
 function restart(){
+    let nodeElement = document.getElementById("message-para");
+    nodeElement.textContent = "";
+    enableButtons(boardElements);
     for(el of boardElements){
         el.textContent = " ";
     }

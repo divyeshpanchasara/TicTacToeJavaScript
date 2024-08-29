@@ -20,6 +20,11 @@ body{
     margin-bottom: 0px;
 }
 
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .button-class{
     height: 70px;
@@ -55,6 +60,21 @@ body{
 }
 
 
+#message-para{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-family: 'Courier New';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #restart-button{
     background-color: black;
     color: white;
@@ -68,7 +88,7 @@ body{
     padding-top: 4px;
     padding-bottom: 4px;
 
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New';
 
     margin-top: 100px;
     margin-bottom: 0px;
@@ -87,7 +107,7 @@ body{
 }
 
 #restart-button:focus {
-    outline: none; /* Disable focus outline */
+    outline: none;
 }
 
 

@@ -136,7 +136,7 @@ function checkForDraw(boardElements) {
 
 function restart() {
   let nodeElement = document.getElementById("message-para");
-  nodeElement.textContent = "";
+  nodeElement.textContent = "Tap to play";
   enableButtons(boardElements);
   for (el of boardElements) {
     el.textContent = " ";

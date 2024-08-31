@@ -1,10 +1,21 @@
 let boardElements = document.getElementsByClassName("button-class");
 
-let player1 = "X";
-let player2 = "O";
+const player1 = "X";
+const player2 = "O";
 let flag = true;
 
+const clickAudio = new Audio();
+clickAudio.src = "./click.mp3";
+
+const winAudio = new Audio();
+winAudio.src = "./win.mp3";
+
+const drawAudio = new Audio();
+drawAudio.src = "./loseOrDraw.mp3";
+
 function move(id) {
+  clickAudio.currentTime = 0;
+  clickAudio.play();
   let nodeElement = document.getElementById("message-para");
   if (!flag) {
     nodeElement.textContent = "Turn : Player " + player1;
@@ -22,10 +33,14 @@ function move(id) {
 
   let win = checkWin(boardElements);
   if (win === 1) {
+    winAudio.play();
+    nodeElement.style.fontSize = "30px";
     nodeElement.textContent = "Player 1 Wins!!";
     disableButtons(boardElements);
     return;
   } else if (win === 2) {
+    winAudio.play();
+    nodeElement.style.fontSize = "30px";
     nodeElement.textContent = "Player 2 Wins!!";
     disableButtons(boardElements);
     return;
@@ -33,6 +48,8 @@ function move(id) {
 
   let draw = checkForDraw(boardElements);
   if (draw === 9) {
+    drawAudio.currentTime = 0;
+    drawAudio.play();
     nodeElement.textContent = "It's a Draw!";
     disableButtons(boardElements);
     return;
@@ -135,7 +152,13 @@ function checkForDraw(boardElements) {
 }
 
 function restart() {
+  drawAudio.pause();
+  drawAudio.currentTime = 0;
+  winAudio.pause();
+  winAudio.currentTime = 0;
+  clickAudio.play();
   let nodeElement = document.getElementById("message-para");
+  nodeElement.style.fontSize = "20px";
   nodeElement.textContent = "Tap to play";
   enableButtons(boardElements);
   for (el of boardElements) {

@@ -95,15 +95,16 @@ body {
   opacity: 0.6;
 }
 
-.flex-wrapper {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: small;
-}
+.footer-class {
+  background-color: black;
+  color: white;
+  align-content: baseline;
 
-.footer {
-  margin-top: auto;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: x-small;
+  font-weight: bold;
+
+  margin-top: 450px;
+  margin-bottom: 0px;
 }

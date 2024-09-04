@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-</head>
-<body>
-    <div>
-        <button class="go-back">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="./style.css" type="text/css">
+        <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    </head>
+    <body>
+        <center>
+            <header>
+                <p class="header" id = "myheader"><b>Tic Tac Toe<b></p>
+            </header>
+        </center>
+        <main>
+            <div class = "board" id = "board">
+                <div class = "row">
+                    <button class="button-class" id = "7" onclick="move(this.id)"></button>
+                    <button class="button-class" id = "8" onclick="move(this.id)"></button>
+                    <button class="button-class" id = "9" onclick="move(this.id)"></button>
+                </div>
+                <div class = "row"> 
+                    <button class="button-class" id = "4" onclick="move(this.id)"></button>
+                    <button class="button-class" id = "5" onclick="move(this.id)"></button>
+                    <button class="button-class" id = "6" onclick="move(this.id)"></button>
+                </div>
+                <div class = "row">
+                    <button class="button-class" id = "1" onclick="move(this.id)"></button>
+                    <button class="button-class" id = "2" onclick="move(this.id)"></button>
+                    <button class="button-class" id = "3" onclick="move(this.id)"></button>
+                </div>        
+            </div>
+            <div class = "message">
+                <p id="message-para">Tap to play</p>
+            </div>
+            <div class="restart">
+                <button id="restart-button" onclick="restart()">Restart Game</button>
+            </div>
+        </main>
+        <script src = "vs_ai.js"></script>
+    </body>
+    <div class="my-div">
+        <a class="back" href="javascript:history. back()">
             Back
-        </button>
+        </a>
     </div>
-</body>
+    <footer class="footer-class">
+        Designed by : Divyesh Panchasara
+    </footer>
 </html>
